@@ -16,6 +16,3 @@ This repository contains assignment 1 which is make multi-page website using htm
 ![Home Page Preview](images/home.jpeg)
 
 ![Post Page Preview](images/post.jpeg)
-
-> Tip: save your latest screenshots in the `screenshots/` folder using the filenames above so they show up here.
-
