@@ -1,18 +1,75 @@
 # OverThink Blog Website
 
-This repository contains assignment 1 which is make multi-page website using html and css. I built a simple two-page blog website using plain HTML and CSS to show that I can organize content, style it cleanly, and keep things consistent across pages.
+A dynamic blog platform built with PHP, MySQL, and JavaScript featuring user authentication, search functionality, and commenting system.
+
+## Features
+- **User Authentication** - Sign up, login, and logout functionality with secure password hashing
+- **Dynamic Blog Posts** - Each post loads unique content from the database
+- **Search Functionality** - Search posts by title, content, or excerpt
+- **Comment System** - Logged-in users can comment on posts
+- **Responsive Design** - Clean, mobile-friendly layout using Flexbox and CSS Grid
 
 ## Pages Included
-- `home.html` – Contain Header with nav bar includes home and post buttons and socail media icons, Main with horizontal and vertical layouts and grids and Footer with additional contact and info.
-- `post.html` – Sample article page with author info, images,etc.
+- `main.php` – Home page with hero section, featured posts, and article grid
+- `post.php` – Dynamic post page displaying content based on slug parameter
 
-### What I Focused On
-- Fixed header with navigation buttons that keep the same look on both pages.
-- Clean layout using Flexbox and CSS Grid.
-- Clear typography, subtle gradients, and consistent spacing.
+## Tech Stack
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP
+- **Database**: MySQL
+- **Server**: XAMPP (Apache + MySQL)
 
-## Screenshots
+## Database Structure
 
-![Home Page Preview](images/home.jpeg)
+### Users Table
+Stores registered user accounts with hashed passwords.
 
-![Post Page Preview](images/post.jpeg)
+![Users Table](images/user.png)
+
+### Comments Table
+Stores user comments linked to posts and users.
+
+![Comments Table](images/comment.png)
+
+## Project Structure
+```
+overthink-blog-assignment/
+├── api/
+│   ├── comments.php    # Handle comment CRUD operations
+│   ├── login.php       # User authentication
+│   ├── logout.php      # Session destruction
+│   ├── search.php      # Search posts
+│   └── signup.php      # User registration
+├── config/
+│   └── database.php    # Database connection
+├── images/             # Image assets
+├── js/
+│   ├── main.js        # Home page JavaScript
+│   └── post.js        # Post page JavaScript
+├── database.sql       # Database schema and seed data
+├── main.php           # Home page
+├── post.php           # Dynamic post page
+├── style.css          # Global styles
+└── README.md          # This file
+```
+
+## Key Features Implementation
+
+### Authentication System
+- Secure password hashing using PHP's `password_hash()`
+- Session management for logged-in users
+- Modal-based login/signup forms
+
+### Dynamic Content
+- Posts are fetched from database based on URL slug parameter
+- Content formatting with automatic heading detection
+- Image handling with fallback support
+
+### Search Functionality
+- Real-time search across post titles, content, and excerpts
+- Results displayed dynamically without page reload
+
+### Comment System
+- Only authenticated users can post comments
+- Comments display username and timestamp
+- Real-time comment loading via AJAX
