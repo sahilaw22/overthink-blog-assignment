@@ -2,6 +2,9 @@
 
 A dynamic blog platform built with PHP, MySQL, and JavaScript featuring user authentication, search functionality, and commenting system.
 
+#live
+website link: https://overthink-website.lovestoblog.com/main.php
+
 ## Features
 - **User Authentication** - Sign up, login, and logout functionality with secure password hashing
 - **Dynamic Blog Posts** - Each post loads unique content from the database
