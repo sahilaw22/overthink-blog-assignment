@@ -2,7 +2,7 @@
 
 A dynamic blog platform built with PHP, MySQL, and JavaScript featuring user authentication, search functionality, and commenting system.
 
-#live
+### Live
 website link: https://overthink-website.lovestoblog.com/main.php
 
 ## Features
